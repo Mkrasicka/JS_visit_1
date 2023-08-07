@@ -22,7 +22,8 @@
     const addElement = function () {
       const element = document.createElement("li");
       element.textContent = number;
-      document.body.appendChild(element);
+      const list = document.querySelector("ul");
+      list.appendChild(element);
       number = number + 2;
       if (number % 3 == 0) {
         element.classList.add("big");
